@@ -1,0 +1,8 @@
+# DEMO SITE — block indexing
+# When building for a real client, change to:
+# User-agent: *
+# Allow: /
+# Sitemap: https://www.clientdomain.com/sitemap.xml
+
+User-agent: *
+Disallow: /
