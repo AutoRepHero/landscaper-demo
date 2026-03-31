@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://demo.chuckzonline.com"),
   title: "Top Landscaping Company in Spokane, WA | Spokane Landscaping",
   description:
     "Professional landscaping, lawn care, landscape design, hardscaping, and irrigation services in Spokane, WA. Licensed & insured. Free estimates — call (509) 555-0101.",
