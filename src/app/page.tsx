@@ -8,7 +8,7 @@ export default function Home() {
       <Header />
       <main>
         {/* Hero */}
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden pb-24">
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden pb-36">
           {/* Background Image */}
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
