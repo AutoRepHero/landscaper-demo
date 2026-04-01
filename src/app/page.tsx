@@ -76,79 +76,87 @@ export default function Home() {
               <div className="w-1.5 h-3 bg-white/70 rounded-full animate-pulse" />
             </div>
           </div>
-        </section>
-
         {/* Services */}
-        <section className="py-20 px-6 bg-white">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-brand-dark text-center mb-4">
-              Our Landscaping Services in Spokane, WA
-            </h2>
-            <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-              From routine lawn care to complete landscape transformations, we offer 
-              comprehensive services to keep your property looking its best year-round.
-            </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  icon: "🌱",
-                  title: "Lawn Care",
-                  desc: "Weekly mowing, fertilization, weed control, and seasonal cleanups to keep your lawn lush and healthy.",
-                },
-                {
-                  icon: "🎨",
-                  title: "Landscape Design",
-                  desc: "Custom designs that blend beauty with functionality, tailored to Spokane's unique climate.",
-                },
-                {
-                  icon: "🧱",
-                  title: "Hardscaping",
-                  desc: "Patios, walkways, retaining walls, and outdoor living spaces built to last.",
-                },
-                {
-                  icon: "💧",
-                  title: "Irrigation Systems",
-                  desc: "Efficient sprinkler installation and repair to keep your landscape thriving.",
-                },
-                {
-                  icon: "❄️",
-                  title: "Snow Removal",
-                  desc: "Reliable residential and commercial snow clearing throughout Spokane winters.",
-                },
-                {
-                  icon: "🌳",
-                  title: "Tree & Shrub Care",
-                  desc: "Pruning, shaping, and health treatments for trees and ornamental shrubs.",
-                },
-              ].map((service) => (
-                <div
-                  key={service.title}
-                  className="bg-brand-light/30 rounded-xl p-6 hover:shadow-lg transition-shadow"
-                >
-                  <div className="text-4xl mb-4">{service.icon}</div>
-                  <h3 className="font-heading text-xl font-bold text-brand-dark mb-2">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4">{service.desc}</p>
-                  <Link
-                    href="/services"
-                    className="text-brand-green font-semibold hover:text-brand-dark transition-colors"
-                  >
-                    Learn More →
-                  </Link>
-                </div>
-              ))}
-            </div>
-            <div className="text-center mt-12">
-              <Link
-                href="/services"
-                className="inline-block bg-brand-green text-white font-semibold px-8 py-3 rounded-xl hover:bg-brand-dark transition-colors"
-              >
-                View All Services
-              </Link>
-            </div>
+<section className="py-20 px-6 bg-white">
+  <div className="max-w-6xl mx-auto">
+    <h2 className="font-heading text-3xl md:text-4xl font-bold text-brand-dark text-center mb-4">
+      Our Landscaping Services in Spokane, WA
+    </h2>
+    <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+      From routine lawn care to complete landscape transformations, we offer 
+      comprehensive services to keep your property looking its best year-round.
+    </p>
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {[
+        {
+          image: "/images/service-lawn.jpg",
+          title: "Lawn Care",
+          desc: "Weekly mowing, fertilization, weed control, and seasonal cleanups to keep your lawn lush and healthy.",
+        },
+        {
+          image: "/images/service-design.jpg",
+          title: "Landscape Design",
+          desc: "Custom designs that blend beauty with functionality, tailored to Spokane's unique climate.",
+        },
+        {
+          image: "/images/service-hardscape.jpg",
+          title: "Hardscaping",
+          desc: "Patios, walkways, retaining walls, and outdoor living spaces built to last.",
+        },
+        {
+          image: "/images/service-irrigation.jpg",
+          title: "Irrigation Systems",
+          desc: "Efficient sprinkler installation and repair to keep your landscape thriving.",
+        },
+        {
+          image: "/images/service-snow.jpg",
+          title: "Snow Removal",
+          desc: "Reliable residential and commercial snow clearing throughout Spokane winters.",
+        },
+        {
+          image: "/images/service-trees.jpg",
+          title: "Tree & Shrub Care",
+          desc: "Pruning, shaping, and health treatments for trees and ornamental shrubs.",
+        },
+      ].map((service) => (
+        <div
+          key={service.title}
+          className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300"
+        >
+          <div className="h-48 overflow-hidden">
+            <img
+              src={service.image}
+              alt={service.title}
+              className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+            />
           </div>
-        </section>
+          <div className="p-6">
+            <h3 className="font-heading text-xl font-bold text-brand-dark mb-2">
+              {service.title}
+            </h3>
+            <p className="text-gray-600 mb-4">{service.desc}</p>
+            <Link
+              href="/services"
+              className="text-brand-green font-semibold hover:text-brand-dark transition-colors inline-flex items-center"
+            >
+              Learn More 
+              <span className="ml-1">→</span>
+            </Link>
+          </div>
+        </div>
+      ))}
+    </div>
+    <div className="text-center mt-12">
+      <Link
+        href="/services"
+        className="inline-block bg-brand-green text-white font-semibold px-8 py-3 rounded-xl hover:bg-brand-dark transition-colors"
+      >
+        View All Services
+      </Link>
+    </div>
+  </div>
+</section>
+
 
         {/* Stats Bar */}
         <section className="bg-brand-dark py-16 px-6">
