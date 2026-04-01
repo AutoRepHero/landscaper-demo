@@ -76,87 +76,161 @@ export default function Home() {
               <div className="w-1.5 h-3 bg-white/70 rounded-full animate-pulse" />
             </div>
           </div>
-        {/* Services */}
-<section className="py-20 px-6 bg-white">
-  <div className="max-w-6xl mx-auto">
-    <h2 className="font-heading text-3xl md:text-4xl font-bold text-brand-dark text-center mb-4">
-      Our Landscaping Services in Spokane, WA
-    </h2>
-    <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-      From routine lawn care to complete landscape transformations, we offer 
-      comprehensive services to keep your property looking its best year-round.
-    </p>
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {[
-        {
-          image: "/images/service-lawn.jpg",
-          title: "Lawn Care",
-          desc: "Weekly mowing, fertilization, weed control, and seasonal cleanups to keep your lawn lush and healthy.",
-        },
-        {
-          image: "/images/service-design.jpg",
-          title: "Landscape Design",
-          desc: "Custom designs that blend beauty with functionality, tailored to Spokane's unique climate.",
-        },
-        {
-          image: "/images/service-hardscape.jpg",
-          title: "Hardscaping",
-          desc: "Patios, walkways, retaining walls, and outdoor living spaces built to last.",
-        },
-        {
-          image: "/images/service-irrigation.jpg",
-          title: "Irrigation Systems",
-          desc: "Efficient sprinkler installation and repair to keep your landscape thriving.",
-        },
-        {
-          image: "/images/service-snow.jpg",
-          title: "Snow Removal",
-          desc: "Reliable residential and commercial snow clearing throughout Spokane winters.",
-        },
-        {
-          image: "/images/service-trees.jpg",
-          title: "Tree & Shrub Care",
-          desc: "Pruning, shaping, and health treatments for trees and ornamental shrubs.",
-        },
-      ].map((service) => (
-        <div
-          key={service.title}
-          className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300"
-        >
-          <div className="h-48 overflow-hidden">
-            <img
-              src={service.image}
-              alt={service.title}
-              className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-            />
-          </div>
-          <div className="p-6">
-            <h3 className="font-heading text-xl font-bold text-brand-dark mb-2">
-              {service.title}
-            </h3>
-            <p className="text-gray-600 mb-4">{service.desc}</p>
-            <Link
-              href="/services"
-              className="text-brand-green font-semibold hover:text-brand-dark transition-colors inline-flex items-center"
-            >
-              Learn More 
-              <span className="ml-1">→</span>
-            </Link>
-          </div>
-        </div>
-      ))}
-    </div>
-    <div className="text-center mt-12">
-      <Link
-        href="/services"
-        className="inline-block bg-brand-green text-white font-semibold px-8 py-3 rounded-xl hover:bg-brand-dark transition-colors"
-      >
-        View All Services
-      </Link>
-    </div>
-  </div>
-</section>
+        </section>
 
+        {/* Services */}
+        <section className="py-20 px-6 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-brand-dark text-center mb-4">
+              Our Landscaping Services in Spokane, WA
+            </h2>
+            <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+              From routine lawn care to complete landscape transformations, we offer 
+              comprehensive services to keep your property looking its best year-round.
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
+                <div className="h-48 overflow-hidden">
+                  <img
+                    src="/images/service-lawn.jpg"
+                    alt="Lawn Care"
+                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="font-heading text-xl font-bold text-brand-dark mb-2">
+                    Lawn Care
+                  </h3>
+                  <p className="text-gray-600 mb-4">Weekly mowing, fertilization, weed control, and seasonal cleanups to keep your lawn lush and healthy.</p>
+                  <Link
+                    href="/services"
+                    className="text-brand-green font-semibold hover:text-brand-dark transition-colors inline-flex items-center"
+                  >
+                    Learn More <span className="ml-1">→</span>
+                  </Link>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
+                <div className="h-48 overflow-hidden">
+                  <img
+                    src="/images/service-design.jpg"
+                    alt="Landscape Design"
+                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="font-heading text-xl font-bold text-brand-dark mb-2">
+                    Landscape Design
+                  </h3>
+                  <p className="text-gray-600 mb-4">Custom designs that blend beauty with functionality, tailored to Spokane&apos;s unique climate.</p>
+                  <Link
+                    href="/services"
+                    className="text-brand-green font-semibold hover:text-brand-dark transition-colors inline-flex items-center"
+                  >
+                    Learn More <span className="ml-1">→</span>
+                  </Link>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
+                <div className="h-48 overflow-hidden">
+                  <img
+                    src="/images/service-hardscape.jpg"
+                    alt="Hardscaping"
+                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="font-heading text-xl font-bold text-brand-dark mb-2">
+                    Hardscaping
+                  </h3>
+                  <p className="text-gray-600 mb-4">Patios, walkways, retaining walls, and outdoor living spaces built to last.</p>
+                  <Link
+                    href="/services"
+                    className="text-brand-green font-semibold hover:text-brand-dark transition-colors inline-flex items-center"
+                  >
+                    Learn More <span className="ml-1">→</span>
+                  </Link>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
+                <div className="h-48 overflow-hidden">
+                  <img
+                    src="/images/service-irrigation.jpg"
+                    alt="Irrigation Systems"
+                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="font-heading text-xl font-bold text-brand-dark mb-2">
+                    Irrigation Systems
+                  </h3>
+                  <p className="text-gray-600 mb-4">Efficient sprinkler installation and repair to keep your landscape thriving.</p>
+                  <Link
+                    href="/services"
+                    className="text-brand-green font-semibold hover:text-brand-dark transition-colors inline-flex items-center"
+                  >
+                    Learn More <span className="ml-1">→</span>
+                  </Link>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
+                <div className="h-48 overflow-hidden">
+                  <img
+                    src="/images/service-snow.jpg"
+                    alt="Snow Removal"
+                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="font-heading text-xl font-bold text-brand-dark mb-2">
+                    Snow Removal
+                  </h3>
+                  <p className="text-gray-600 mb-4">Reliable residential and commercial snow clearing throughout Spokane winters.</p>
+                  <Link
+                    href="/services"
+                    className="text-brand-green font-semibold hover:text-brand-dark transition-colors inline-flex items-center"
+                  >
+                    Learn More <span className="ml-1">→</span>
+                  </Link>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
+                <div className="h-48 overflow-hidden">
+                  <img
+                    src="/images/service-trees.jpg"
+                    alt="Tree and Shrub Care"
+                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="font-heading text-xl font-bold text-brand-dark mb-2">
+                    Tree & Shrub Care
+                  </h3>
+                  <p className="text-gray-600 mb-4">Pruning, shaping, and health treatments for trees and ornamental shrubs.</p>
+                  <Link
+                    href="/services"
+                    className="text-brand-green font-semibold hover:text-brand-dark transition-colors inline-flex items-center"
+                  >
+                    Learn More <span className="ml-1">→</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="text-center mt-12">
+              <Link
+                href="/services"
+                className="inline-block bg-brand-green text-white font-semibold px-8 py-3 rounded-xl hover:bg-brand-dark transition-colors"
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
+        </section>
 
         {/* Stats Bar */}
         <section className="bg-brand-dark py-16 px-6">
@@ -191,43 +265,44 @@ export default function Home() {
               throughout the Spokane area.
             </p>
             <div className="grid md:grid-cols-3 gap-8">
-              {[
-                {
-                  quote:
-                    "They transformed our backyard into an oasis. The patio and fire pit area is now our favorite spot!",
-                  name: "Sarah M.",
-                  location: "South Hill",
-                  rating: 5,
-                },
-                {
-                  quote:
-                    "Reliable, professional, and always on time. Our lawn has never looked better. Highly recommend!",
-                  name: "Mike & Jennifer T.",
-                  location: "Spokane Valley",
-                  rating: 5,
-                },
-                {
-                  quote:
-                    "The irrigation system they installed cut our water bill in half. Great work and great people!",
-                  name: "David R.",
-                  location: "Liberty Lake",
-                  rating: 5,
-                },
-              ].map((testimonial, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow"
-                >
-                  <div className="flex mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <span key={i} className="text-brand-gold text-xl">⭐</span>
-                    ))}
-                  </div>
-                  <p className="text-gray-700 mb-4 italic">&ldquo;{testimonial.quote}&rdquo;</p>
-                  <div className="font-semibold text-brand-dark">{testimonial.name}</div>
-                  <div className="text-sm text-gray-500">{testimonial.location}</div>
+              <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+                <div className="flex mb-4">
+                  <span className="text-brand-gold text-xl">⭐</span>
+                  <span className="text-brand-gold text-xl">⭐</span>
+                  <span className="text-brand-gold text-xl">⭐</span>
+                  <span className="text-brand-gold text-xl">⭐</span>
+                  <span className="text-brand-gold text-xl">⭐</span>
                 </div>
-              ))}
+                <p className="text-gray-700 mb-4 italic">&ldquo;They transformed our backyard into an oasis. The patio and fire pit area is now our favorite spot!&rdquo;</p>
+                <div className="font-semibold text-brand-dark">Sarah M.</div>
+                <div className="text-sm text-gray-500">South Hill</div>
+              </div>
+
+              <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+                <div className="flex mb-4">
+                  <span className="text-brand-gold text-xl">⭐</span>
+                  <span className="text-brand-gold text-xl">⭐</span>
+                  <span className="text-brand-gold text-xl">⭐</span>
+                  <span className="text-brand-gold text-xl">⭐</span>
+                  <span className="text-brand-gold text-xl">⭐</span>
+                </div>
+                <p className="text-gray-700 mb-4 italic">&ldquo;Reliable, professional, and always on time. Our lawn has never looked better. Highly recommend!&rdquo;</p>
+                <div className="font-semibold text-brand-dark">Mike & Jennifer T.</div>
+                <div className="text-sm text-gray-500">Spokane Valley</div>
+              </div>
+
+              <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+                <div className="flex mb-4">
+                  <span className="text-brand-gold text-xl">⭐</span>
+                  <span className="text-brand-gold text-xl">⭐</span>
+                  <span className="text-brand-gold text-xl">⭐</span>
+                  <span className="text-brand-gold text-xl">⭐</span>
+                  <span className="text-brand-gold text-xl">⭐</span>
+                </div>
+                <p className="text-gray-700 mb-4 italic">&ldquo;The irrigation system they installed cut our water bill in half. Great work and great people!&rdquo;</p>
+                <div className="font-semibold text-brand-dark">David R.</div>
+                <div className="text-sm text-gray-500">Liberty Lake</div>
+              </div>
             </div>
           </div>
         </section>
@@ -255,35 +330,4 @@ export default function Home() {
         <section className="py-20 px-6 bg-white">
           <div className="max-w-6xl mx-auto text-center">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-brand-dark mb-4">
-              Proudly Serving the Spokane Area
-            </h2>
-            <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-              We provide professional landscaping services throughout Spokane County 
-              and the surrounding communities.
-            </p>
-            <div className="flex flex-wrap justify-center gap-3">
-              {[
-                "Spokane",
-                "Spokane Valley",
-                "Liberty Lake",
-                "Cheney",
-                "Airway Heights",
-                "Mead",
-                "Millwood",
-                "Deer Park",
-              ].map((area) => (
-                <span
-                  key={area}
-                  className="bg-brand-light text-brand-dark px-4 py-2 rounded-full text-sm font-medium"
-                >
-                  📍 {area}
-                </span>
-              ))}
-            </div>
-          </div>
-        </section>
-      </main>
-      <Footer />
-    </>
-  );
-}
+              Proudly Serving th
